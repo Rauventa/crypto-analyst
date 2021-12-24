@@ -1,0 +1,6 @@
+{
+  "port": 5000,
+  "mongoUri": "mongodb+srv://Alex:12345qwerty@cluster0.oj8y5.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
+  "jwtSecret": "Crypto analyst JWT SECRET",
+  "adminJwtSecret": "Crypto analyst ADMIN JWT SECRET"
+}
