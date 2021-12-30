@@ -16,45 +16,33 @@ router.post(
     ],
     async (req, res) => {
         try {
-            // const errors = validationResult(req);
-            // if (!errors.isEmpty()) {
-            //     return res.status(400).json({
-            //         errors: errors.array(),
-            //         message: 'Некорректные данные при регистрации'
-            //     })
-            // }
-            //
-            // const {email, password, repeat, name, country} = req.body;
-            //
-            // console.log(email)
-            //
-            // const candidate = await User.findOne({email});
-            // if (candidate) {
-            //     return res.status(400).json({message: 'Такой пользователь уже существует'})
-            // }
-            //
-            // const plan = await Plan.findOne({type: 0})
-            //
-            // console.log(plan)
+            const errors = validationResult(req);
+            if (!errors.isEmpty()) {
+                return res.status(400).json({
+                    errors: errors.array(),
+                    message: 'Некорректные данные при регистрации'
+                })
+            }
 
-            const {name} = req.body
+            const {email, password, repeat, name, country} = req.body;
 
-            console.log(name)
+            const candidate = await User.findOne({email});
+            if (candidate) {
+                return res.status(400).json({message: 'Такой пользователь уже существует'})
+            }
 
-            const user = new User({name});
+            const plan = await Plan.findOne({type: 0})
 
-            await user.save();
+            if (password === repeat) {
+                const hashedPassword = await bcrypt.hash(password, 12);
+                const user = new User({email, password: hashedPassword, name, country, plan});
 
-            // if (password === repeat) {
-            //     const hashedPassword = await bcrypt.hash(password, 12);
-            //     const user = new User({email, password: hashedPassword, name, country, plan});
-            //
-            //     await user.save();
-            //
-            //     res.status(201).json({message: 'Пользователь создан'});
-            // } else {
-            //     res.status(400).json({message: 'Пароли не совпадают'})
-            // }
+                await user.save();
+
+                res.status(201).json({message: 'Пользователь создан'});
+            } else {
+                res.status(400).json({message: 'Пароли не совпадают'})
+            }
 
         } catch (e) {
             res.status(500).json({message: 'Что-то пошло не так, попробуйте снова'})

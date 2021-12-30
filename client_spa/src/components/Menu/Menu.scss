@@ -1,0 +1,50 @@
+.menu {
+  //padding: 30px;
+
+  &__item {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 30px;
+    transition: ease-in-out .3s;
+
+    //&:not(:last-child) {
+    //  margin-bottom: 20px;
+    //}
+    
+    &_icon {
+      margin-right: 10px;
+      border-radius: 5px;
+      background-color: #E9EFF2;
+      padding: 10px;
+      transition: ease-in-out .3s;
+
+      svg {
+        color: #879099;
+      }
+    }
+
+    &_title {
+      color: #43474E;
+      font-weight: 600;
+      font-size: 14px;
+    }
+
+    &:hover {
+      background: rgba(33, 202, 183, 0.2);
+      cursor: pointer;
+
+      .menu__item_title {
+        color: #21CAB7;
+      }
+
+      .menu__item_icon {
+        background-color: #21CAB7;
+
+        svg {
+          color: #ffffff;
+        }
+      }
+    }
+  }
+}

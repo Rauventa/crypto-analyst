@@ -1,0 +1,39 @@
+.layout {
+  display: flex;
+  justify-content: center;
+  background-color: #221E34;
+  min-height: 100vh;
+
+  &__overflow {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    //width: 1400px;
+  }
+
+  &__header {
+    height: 7vh;
+  }
+
+  &__main {
+    display: flex;
+    justify-content: space-between;
+
+    &_menu, &_content {
+      min-height: calc(100vh - 7vh);
+      height: 100%;
+    }
+
+    &_menu {
+      width: 10%;
+      background-color: #ffffff;
+    }
+
+    &_content {
+      padding: 30px;
+      display: flex;
+      width: 90%;
+      background-color: #F4F8F9;
+    }
+  }
+}
