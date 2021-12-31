@@ -13,6 +13,9 @@
     //}
     
     &_icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
       margin-right: 10px;
       border-radius: 5px;
       background-color: #E9EFF2;
@@ -21,13 +24,15 @@
 
       svg {
         color: #879099;
+        width: 13px !important;
+        height: 13px;
       }
     }
 
     &_title {
       color: #43474E;
       font-weight: 600;
-      font-size: 14px;
+      font-size: 13px;
     }
 
     &:hover {

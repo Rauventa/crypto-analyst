@@ -1,0 +1,45 @@
+.theme {
+  &__light {
+
+    color: #43474E;
+
+    .header {
+      background-color: #ffffff;
+      border-bottom: 1px solid #EAEAEA;
+    }
+
+    .layout {
+      &__main {
+        &_menu {
+          background-color: #ffffff;
+        }
+
+        &_content {
+          background-color: #F4F8F9;
+        }
+      }
+    }
+  }
+
+  &__dark {
+
+    color: #ffffff;
+
+    .header {
+      background-color: #2A263E;
+      border-bottom: 1px solid #0000002e;
+    }
+
+    .layout {
+      &__main {
+        &_menu {
+          background-color: #2A263E;
+        }
+
+        &_content {
+          background-color: #221E34;
+        }
+      }
+    }
+  }
+}

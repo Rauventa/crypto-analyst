@@ -1,7 +1,6 @@
 .layout {
   display: flex;
   justify-content: center;
-  background-color: #221E34;
   min-height: 100vh;
 
   &__overflow {
@@ -26,14 +25,12 @@
 
     &_menu {
       width: 10%;
-      background-color: #ffffff;
     }
 
     &_content {
       padding: 30px;
       display: flex;
       width: 90%;
-      background-color: #F4F8F9;
     }
   }
 }
