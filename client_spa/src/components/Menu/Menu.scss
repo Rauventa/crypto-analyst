@@ -1,5 +1,48 @@
 .menu {
-  //padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 15px 0;
+  height: 100%;
+
+  &__main {
+
+  }
+
+  &__additional {
+    display: flex;
+    flex-direction: column;
+
+    &_item {
+      padding: 15px 30px;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      transition: ease-in-out .3s;
+
+      &-text {
+        color: #DB3737;
+      }
+
+      &-icon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 10px;
+        border-radius: 5px;
+        background-color: #E9EFF2;
+        padding: 10px;
+        transition: ease-in-out .3s;
+
+        svg {
+          color: #DB3737;
+          width: 13px !important;
+          height: 13px;
+        }
+      }
+    }
+  }
 
   &__item {
     display: flex;

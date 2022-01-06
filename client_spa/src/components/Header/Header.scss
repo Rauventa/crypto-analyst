@@ -2,5 +2,61 @@
   height: 100%;
   padding: 30px;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+
+  &__logo {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #21CAB7;
+
+    span {
+      color: #272A42;
+      margin-left: 5px;
+    }
+  }
+
+  &__content {
+    display: flex;
+
+    &_user {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      cursor: pointer;
+
+      &-name {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      img {
+        margin-right: 10px;
+        width: 35px;
+        height: 35px;
+        border-radius: 100px;
+      }
+    }
+    &_theme {
+      display: flex;
+      padding: 10px;
+      background-color: #f3f3f3;
+      cursor: pointer;
+      border-radius: 100px;
+      transition: ease-in-out .3s;
+
+      svg {
+        color: #21CAB7;
+        width: 15px !important;
+        height: 15px;
+      }
+
+      &:hover {
+        box-shadow: 0 0 5px #00000036;
+        //ffffff2e
+      }
+    }
+  }
 }

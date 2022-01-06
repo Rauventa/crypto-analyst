@@ -4,3 +4,31 @@
   margin: 0;
   font-family: 'Montserrat', sans-serif;
 }
+
+//page styles
+
+.page {
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+  }
+}
+
+//statuses
+
+.status {
+
+  &-warning, &-success {
+    font-size: 13px;
+    font-weight: 600;
+  }
+
+  &-warning {
+    color: #e75656;
+  }
+
+  &-success {
+    color: #6DC6AC;
+  }
+}

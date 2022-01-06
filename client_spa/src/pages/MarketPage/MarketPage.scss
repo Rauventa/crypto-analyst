@@ -1,0 +1,83 @@
+.market-page {
+  width: 100%;
+
+  &__coin {
+    border-radius: 5px;
+    background-color: #ffffff;
+    display: flex;
+    flex-basis: 100%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 15px;
+    box-shadow: 0 0 7px #0000002b;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+
+    &_title {
+      display: flex;
+      align-items: center;
+      width: 25%;
+
+      &-img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 20px;
+
+        img {
+          width: 30px;
+          height: 30px;
+          border-radius: 100px;
+        }
+      }
+
+      &-main, &-symbol {
+        font-size: 14px;
+        font-weight: 600;
+      }
+
+      &-main {
+        color: #272A42;
+        margin-right: 5px;
+      }
+
+      &-symbol {
+        text-transform: uppercase;
+        color: #7F8285;
+      }
+    }
+
+    &_price {
+      display: flex;
+      width: 25%;
+
+      &-count, &-coin {
+        font-size: 13px;
+        font-weight: 600;
+      }
+
+      &-coin {
+        margin-right: 10px;
+        color: #7F8285;
+        text-transform: uppercase;
+      }
+
+      &-count {
+        color: #272A42;
+      }
+    }
+
+    &_grow {
+      width: 25%;
+    }
+
+    &_chart {
+      width: 25%;
+      font-size: 13px;
+      font-weight: 600;
+    }
+  }
+}

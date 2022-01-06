@@ -1,8 +1,9 @@
 import React from "react";
-import {faChartLine, faBriefcase} from '@fortawesome/free-solid-svg-icons';
+import {faChartLine, faBriefcase, faSignOutAlt, faSignInAlt} from '@fortawesome/free-solid-svg-icons';
 import './Menu.scss'
 import {MenuItem} from "./MenuItem/MenuItem";
 import { MenuItemsProps } from "../../interfaces/Menu/Menu";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 
 export const Menu = () => {
 
@@ -21,13 +22,25 @@ export const Menu = () => {
 
   return (
     <div className={'menu'}>
-      {menuItems.map((item: MenuItemsProps) => {
-        return (
-          <MenuItem
-            {...item}
-          />
-        )
-      })}
+      <div className="menu__main">
+        {menuItems.map((item: MenuItemsProps) => {
+          return (
+            <MenuItem
+              {...item}
+            />
+          )
+        })}
+      </div>
+      <div className="menu__additional">
+        <div className="menu__additional_item">
+          <div className="menu__additional_item-icon">
+            <FontAwesomeIcon icon={faSignInAlt} />
+          </div>
+          <div className="menu__additional_item-text">
+            Log out
+          </div>
+        </div>
+      </div>
     </div>
   )
 }
