@@ -1,15 +1,19 @@
-version: '3.9'
-
+version: "3"
 services:
-  client_spa:
-    build:
-      context: ./client_spa
-      dockerfile: Dockerfile
-    image: myapp-client
-    container_name: myapp-react-client
-    command: npm run start
-    volumes:
-      - ./client_spa/:/usr/app
-      - /usr/app/node_modules
+  api:
+    build: ./
     ports:
-      - "3000:3000"
+      - "8080:8080"
+    depends_on:
+      - db
+    container_name: crypto_analyst
+  client:
+    build: ./services/client_spa
+    ports:
+      - "80:80"
+    container_name: blog-client
+  db:
+    image: mongo
+    ports:
+      - "27017:27017"
+    container_name: blog-db
