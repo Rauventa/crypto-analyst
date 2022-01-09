@@ -1,0 +1,30 @@
+.layout {
+    min-height: 100vh;
+
+    &__menu {
+        overflow: auto;
+        height: 100vh;
+        position: sticky;
+        left: 0;
+        top: 0;
+    }
+
+    &__header {
+        background-color: #fff;
+    }
+
+    &__content {
+        padding: 20px;
+        overflow: initial;
+    }
+}
+
+.logo {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFF;
+    font-weight: 700;
+}
